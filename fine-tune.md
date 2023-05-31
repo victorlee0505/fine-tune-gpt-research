@@ -1,3 +1,14 @@
+# this project is for research purpose only.
+
+# Research Result: (updating....)
+- fine tuning a pretrained is not the way to teach new knowledge to a model.
+- if dataset prepared is not carefully crafted
+    - exact prompt might generate exact completion from the dataset
+    - other prompt not in dataset do not generate any meaningful completion
+    - hence, not useful
+
+- I like to try again, crafting the prompt and completion to handle the format / and related info for such dataset. and then embedding the data to the  fine tuned model to see if it yeild better result.
+
 # prerequisite
 a openai subscription and generated a OPENAI_API_KEY, set it in system envrionment variable
 https://platform.openai.com/docs/guides/fine-tuning
@@ -85,9 +96,3 @@ openai api fine_tunes.follow -i <YOUR_FINE_TUNE_JOB_ID>
 ```
 openai api completions.create -m <FINE_TUNED_MODEL> -p <YOUR_PROMPT>
 ```
-
-# Research Result: (updating....)
-- fine tuning a pretrained is not the way to teach new knowledge to a model.
-- if dataset prepared is not carefully crafted
-    - exact prompt might generate exact completion from the dataset
-    - other prompt not in dataset do not generate any meaningful completion
